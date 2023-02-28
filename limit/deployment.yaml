@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resorce
+  labels:
+    app: nginxq
+
+spec:
+  replicas: 50
+  selector:
+    matchLabels:
+      app: nginxq
+
+  template:
+    metadata:
+      labels:
+        app: nginxq
+    spec:
+      containers:
+        - name: app
+          image: httpd
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
