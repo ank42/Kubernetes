@@ -4,13 +4,11 @@ metadata:
   name: resorce
   labels:
     app: nginxq
-
 spec:
   replicas: 50
   selector:
     matchLabels:
       app: nginxq
-
   template:
     metadata:
       labels:
