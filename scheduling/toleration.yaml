@@ -9,7 +9,6 @@ spec:
   containers:
   - image: nginx
     name: bee
-    resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Always
   tolerations:
@@ -18,4 +17,3 @@ spec:
     value: "mortein"
     effect: "NoSchedule"
 
-status: {}

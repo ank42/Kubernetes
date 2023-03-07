@@ -10,7 +10,6 @@ spec:
   selector:
     matchLabels:
       app: blue
-  strategy: {}
   template:
     metadata:
       creationTimestamp: null
@@ -20,7 +19,6 @@ spec:
       containers:
       - image: nginx
         name: nginx
-        resources: {}
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -30,4 +28,3 @@ spec:
                 operator: In
                 values:
                 - blue
-status: {}
