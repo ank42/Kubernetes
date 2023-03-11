@@ -1,0 +1,8 @@
+To label a node 
+- kubectl label nodes node01 size=large
+
+command for tain a node
+- kubectl taint nodes node01 spray=mortein:NoSchedule
+
+To remove taint from a node
+- kubectl taint nodes node01 spray=mortein:NoSchedule-
